@@ -1,0 +1,15 @@
+Step 3: Clean and Compile the Project
+Run the following command to remove old builds and recompile:
+
+sh
+Copy
+Edit
+npx hardhat clean
+npx hardhat compile
+Step 4: Deploy Again
+Once the compilation is successful, deploy again:
+
+sh
+Copy
+Edit
+npx hardhat run scripts/deploy.js --network educhain
