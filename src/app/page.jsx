@@ -1,3 +1,6 @@
+"use client"
+import { useEffect, useRef } from "react";
+import LocomotiveScroll from "locomotive-scroll";
 
 import ButtonGradient from "../assets/svg/ButtonGradient";
 import Benefits from "../components/Benefits";
@@ -10,9 +13,24 @@ import Roadmap from "../components/Roadmap";
 import Services from "../components/Services";
 
 const App = () => {
+    const scrollRef = useRef(null);
+
+    useEffect(() => {
+        const scroll = new LocomotiveScroll({
+            el: scrollRef.current,
+            smooth: true,
+            lerp: 0.9,
+            multiplier: 0.1,
+        });
+
+        return () => {
+            if (scroll) scroll.destroy();
+        };
+    }, []);
+
     return (
-        <>
-            <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+        <div ref={scrollRef} data-scroll-container className="overflow-hidden">
+            <div className="pt-[4.75rem] lg:pt-[5.25rem]">
                 <Header />
                 <Hero />
                 <Benefits />
@@ -23,7 +41,7 @@ const App = () => {
                 <Footer />
             </div>
             <ButtonGradient />
-        </>
+        </div>
     );
 };
 
