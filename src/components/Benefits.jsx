@@ -1,10 +1,9 @@
 import { benefits } from "../constants";
 import Heading from "./Heading";
 import Section from "./Section";
-import Arrow from "../../public/assets/svg/Arrow";
+import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
-import ClipPath from "../../public/assets/svg/ClipPath";
-import Image from "next/image";
+import ClipPath from "../assets/svg/ClipPath";
 
 const Benefits = () => {
   return (
@@ -12,7 +11,6 @@ const Benefits = () => {
       <div className="container relative z-2">
         <Heading
           className="md:max-w-md lg:max-w-2xl"
-          id="title"
           title="Chat Smarter, Not Harder with Visionwave"
         />
 
@@ -29,7 +27,7 @@ const Benefits = () => {
                 <h5 className="h5 mb-5">{item.title}</h5>
                 <p className="body-2 mb-6 text-n-3">{item.text}</p>
                 <div className="flex items-center mt-auto">
-                  <Image
+                  <img
                     src={item.iconUrl}
                     width={48}
                     height={48}
@@ -50,7 +48,7 @@ const Benefits = () => {
               >
                 <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
                   {item.imageUrl && (
-                    <Image
+                    <img
                       src={item.imageUrl}
                       width={380}
                       height={362}

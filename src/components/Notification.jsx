@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { notification1 } from "../../public/assets";
+import { notification1 } from "../assets";
 import { notificationImages } from "../constants";
 
 const Notification = ({ className, title }) => {
@@ -9,7 +8,7 @@ const Notification = ({ className, title }) => {
         className || ""
       } flex items-center p-4 pr-6 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl gap-5`}
     >
-      <Image
+      <img
         src={notification1}
         width={62}
         height={62}
@@ -27,7 +26,7 @@ const Notification = ({ className, title }) => {
                 key={index}
                 className="flex w-6 h-6 border-2 border-n-12 rounded-full overflow-hidden"
               >
-                <Image
+                <img
                   src={item}
                   className="w-full"
                   width={20}

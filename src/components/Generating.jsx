@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { loading } from "../../public/assets";
+import { loading } from "../assets";
 
 const Generating = ({ className }) => {
   return (
@@ -8,7 +7,7 @@ const Generating = ({ className }) => {
         className || ""
       } text-base`}
     >
-      <Image className="w-5 h-5 mr-4" src={loading} alt="Loading" />
+      <img className="w-5 h-5 mr-4" src={loading} alt="Loading" />
       AI is generating
     </div>
   );
