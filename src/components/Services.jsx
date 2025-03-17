@@ -46,7 +46,7 @@ const Services = () => {
                     key={index}
                     className="flex items-start py-4 border-t border-n-6"
                   >
-                    <Image width={24} height={24} src={check} />
+                    <Image width={24} height={24} src={check} alt="img" />
                     <p className="ml-4">{item}</p>
                   </li>
                 ))}
