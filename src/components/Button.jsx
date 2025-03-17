@@ -1,4 +1,6 @@
+"use client"
 import ButtonSvg from "../assets/svg/ButtonSvg";
+import Image from "next/image";
 
 const Button = ({ className, href, onClick, children, px, white }) => {
   const classes = `button disabled:opacity-50 relative inline-flex items-center justify-center h-11 transition-colors hover:text-color-1 ${

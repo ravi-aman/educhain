@@ -1,3 +1,4 @@
+"use client"
 import TagLine from "./Tagline";
 
 const Heading = ({ className, title, text, tag }) => {

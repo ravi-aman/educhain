@@ -1,5 +1,7 @@
+"use client"
 import { useEffect, useState } from "react";
 import { MouseParallax } from "react-just-parallax";
+import Image from "next/image";
 
 import PlusSvg from "../../assets/svg/PlusSvg";
 
