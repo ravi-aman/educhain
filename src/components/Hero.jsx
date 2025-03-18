@@ -41,7 +41,7 @@ const Hero = () => {
             Unleash the power of AI within Visionwave. Upgrade your productivity
             with Visionwave, the open AI chat app.
           </p>
-          <Button href="/pricing" white>
+          <Button href="/dashboard" white>
             Get started
           </Button>
         </div>
