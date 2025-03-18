@@ -7,11 +7,32 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
-cache
+.cache
+
+# Next.js build output
+next
+
+.next/
+
+out
+.next/cache
+.next/static
+.next/standalone
+.next/server
+
+# Distribution files
 dist
 dist-ssr
+
+# Local environment files
 *.local
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Editor directories and files
 .vscode/*
@@ -24,9 +45,6 @@ dist-ssr
 *.sln
 *.sw?
 
-node_modules
-.env
-
 # Hardhat files
 /cache
 /artifacts
@@ -35,7 +53,7 @@ node_modules
 /typechain
 /typechain-types
 
-# solidity-coverage files
+# Solidity-coverage files
 /coverage
 /coverage.json
 
