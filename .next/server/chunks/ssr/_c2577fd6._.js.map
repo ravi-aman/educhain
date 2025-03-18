@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://F%3A/skullai/src/app/layout.jsx"],"sourcesContent":["// app/layout.js\r\n\r\nimport \"./index.css\";\r\nexport default function Layout({ children }) {\r\n    return (\r\n        <>\r\n            <html lang=\"en\">\r\n                <body>{children}</body>\r\n            </html>\r\n        </>\r\n\r\n    );\r\n}\r\n"],"names":[],"mappings":"AAAA,gBAAgB;;;;;;;AAGD,SAAS,OAAO,EAAE,QAAQ,EAAE;IACvC,qBACI;kBACI,cAAA,8OAAC;YAAK,MAAK;sBACP,cAAA,8OAAC;0BAAM;;;;;;;;;;;;AAKvB","debugId":null}},
-    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":["file://F%3A/skullai/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = require('../../module.compiled').vendored[\n  'react-rsc'\n].ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQ,4HAAyBC,QAAQ,CACxD,YACD,CAACC,kBAAkB","ignoreList":[0],"debugId":null}}]
-}
