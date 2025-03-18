@@ -59,3 +59,16 @@ dist-ssr
 
 # Hardhat Ignition default folder for deployments against a local node
 ignition/deployments/chain-31337
+
+
+
+# Next.js build folders
+.next/
+out/
+dist/
+
+# Node modules
+node_modules/
+
+# Environment files
+.env
