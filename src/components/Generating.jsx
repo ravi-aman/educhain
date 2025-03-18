@@ -10,7 +10,7 @@ const Generating = ({ className }) => {
       } text-base`}
     >
       <Image className="w-5 h-5 mr-4" src={loading} alt="Loading" />
-      AI is generating
+      Uploading Research paper
     </div>
   );
 };

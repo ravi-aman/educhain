@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Section from "./Section";
 import Heading from "./Heading";
 import Image from "next/image";
@@ -18,10 +18,7 @@ const Services = () => {
   return (
     <Section id="how-to-use">
       <div className="container">
-        <Heading
-          title="Generative AI made for creators."
-          text="Visionwave unlocks the potential of AI-powered applications"
-        />
+        <Heading title="Use Cases" text="How can you use Veritas" />
 
         <div className="relative">
           <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
@@ -29,16 +26,16 @@ const Services = () => {
               <Image
                 className="w-full h-full object-cover md:object-right"
                 width={800}
-                alt="Smartest AI"
+                alt="For Researchers"
                 height={730}
                 src={service1}
               />
             </div>
 
             <div className="relative z-1 max-w-[17rem] ml-auto">
-              <h4 className="h4 mb-4">Smartest AI</h4>
+              <h4 className="h4 mb-4">For Researchers</h4>
               <p className="body-2 mb-[3rem] text-n-3">
-              Visionwave unlocks the potential of AI-powered applications
+                Securely publish papers & receive funding
               </p>
               <ul className="body-2">
                 {brainwaveServices.map((item, index) => (
@@ -69,10 +66,10 @@ const Services = () => {
               </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                <h4 className="h4 mb-4">Photo editing</h4>
+                <h4 className="h4 mb-4">For Universities & Organizations</h4>
                 <p className="body-2 mb-[3rem] text-n-3">
-                  Automatically enhance your photos using our AI app&apos;s
-                  photo editing feature. Try it now!
+                  Manage research grants with transparency and track how
+                  research funds are utilized.
                 </p>
               </div>
 
@@ -81,10 +78,10 @@ const Services = () => {
 
             <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
-                <h4 className="h4 mb-4">Video generation</h4>
+                <h4 className="h4 mb-4">For Government</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
-                  The world’s most powerful AI photo and video art generation
-                  engine. What will you create?
+                  Government can ensure public-funded research is used
+                  effectively.
                 </p>
 
                 <ul className="flex items-center justify-between">
@@ -109,19 +106,6 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              <div className="relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]">
-                <Image
-                  src={service3}
-                  className="w-full h-full object-cover"
-                  width={520}
-                  height={400}
-                  alt="Scary robot"
-                />
-
-                <VideoChatMessage />
-                <VideoBar />
               </div>
             </div>
           </div>

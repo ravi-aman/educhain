@@ -42,7 +42,7 @@ const Header = () => {
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <Link className="block w-[12rem] xl:mr-8" href="#hero">
-          <p className="font-bold text-lg">Amango</p>
+          <p className="font-bold text-lg">Veritas</p>
         </Link>
 
         <nav

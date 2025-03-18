@@ -30,8 +30,8 @@ const Pricing = () => {
         </div>
 
         <Heading
-          tag="Get started with Visionwave"
-          title="Pay once, use forever"
+          tag="Get started with Veritas"
+          title="Small investments, huge returns"
         />
 
         <div className="relative">
