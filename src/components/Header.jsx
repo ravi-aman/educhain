@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { usePathname } from "next/navigation";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState, useEffect } from "react";
-import { ethers } from "ethers"; 
+import { connectWallet, checkWalletConnection } from "../helper/connectWallet";
 
 const Header = () => {
   const pathname = usePathname();
@@ -30,38 +30,8 @@ const Header = () => {
     setOpenNavigation(false);
   };
 
-  const connectWallet = async () => {
-    if (typeof window !== "undefined" && window.ethereum) {
-      try {
-        const provider = new ethers.BrowserProvider(window.ethereum);
-        const accounts = await provider.send("eth_requestAccounts", []);
-        setAccount(accounts[0]);
-        console.log("Wallet Connected:", accounts[0]);
-      } catch (error) {
-        console.error("Wallet connection failed", error);
-      }
-    } else {
-      alert("Please install MetaMask!");
-    }
-  };
-
   useEffect(() => {
-    const checkWalletConnection = async () => {
-      if (typeof window !== "undefined" && window.ethereum) {
-        try {
-          const provider = new ethers.BrowserProvider(window.ethereum);
-          const accounts = await provider.listAccounts();
-          if (accounts.length > 0) {
-            setAccount(accounts[0]);
-            console.log("Already Connected:", accounts[0]);
-          }
-        } catch (error) {
-          console.error("Error checking wallet connection", error);
-        }
-      }
-    };
-
-    checkWalletConnection();
+    checkWalletConnection(setAccount);
   }, []);
 
   return (
@@ -101,11 +71,14 @@ const Header = () => {
 
         <Link
           href="#signup"
-          onClick={!account ? connectWallet : undefined}
+          onClick={!account ? () => connectWallet(setAccount) : undefined}
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
-          {account ? <p>{account.slice(0, 6) + "..." + account.slice(-4)}</p> : <h1>Connect Wallet</h1>}
+          {account && typeof account === "string"
+            ? `${account.slice(0, 6)}...${account.slice(-4)}`
+            : "Connect Wallet"}
         </Link>
+
         <Button className="hidden lg:flex" href="#login">
           Sign in
         </Button>
